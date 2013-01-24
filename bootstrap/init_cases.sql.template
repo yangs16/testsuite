@@ -74,6 +74,77 @@ CREATE OR REPLACE VIEW testresultreport AS
       WHEN  trb.evaluation_function = 0 AND tr.evaluation_function = 0 
       THEN 'PASSED'
 
+      WHEN tr.itemname in (
+        'newplda_basic_function_nips_0_0_newplda_train_0',
+ 	    'newplda_basic_function_nips_0_0_newplda_predict_1',
+		'newplda_basic_function_nytimes_0_0_newplda_train_0',
+	 	'newplda_basic_function_nytimes_0_0_newplda_predict_1',
+		'newplda_datatable_checking_0_2_newplda_train_0',
+		'newplda_datatable_checking_0_3_newplda_train_0',
+		'newplda_datatable_checking_0_4_newplda_train_0',
+		'newplda_vocsize_checking_0_1_newplda_train_0',
+		'newplda_iternum_checking_0_1_newplda_train_0',
+		'newplda_toy_gen_model_for_pred_parameter_checking_0_0_newplda_train_0',
+		'newplda_datatable_checking_pred_0_2_newplda_predict_0', 
+		'newplda_datatable_checking_pred_0_3_newplda_predict_0', 
+		'newplda_datatable_checking_pred_0_4_newplda_predict_0') 
+      THEN 
+        CASE WHEN tr.issuccessful = true and (
+            tr.result_info LIKE '%model table%output data table%' OR 
+            tr.result_info LIKE '%per-doc topic distribution and per-word topic assignments%')
+        THEN
+            'PASSED'
+        ELSE
+            'FAILED'
+        END
+
+      WHEN tr.itemname in (
+		'newplda_datatable_checking_0_0_newplda_train_0',
+		'newplda_datatable_checking_0_1_newplda_train_0',
+		'newplda_datatable_checking_0_5_newplda_train_0',
+		'newplda_modeltable_checking_0_0_newplda_train_0',
+		'newplda_outdatatable_checking_0_0_newplda_train_0',
+		'newplda_vocsize_checking_0_0_newplda_train_0',
+		'newplda_topicnum_checking_0_0_newplda_train_0',
+		'newplda_topicnum_checking_0_1_newplda_train_0',
+		'newplda_iternum_checking_0_0_newplda_train_0',
+		'newplda_alpha_checking_0_0_newplda_train_0',
+		'newplda_alpha_checking_0_1_newplda_train_0',
+		'newplda_beta_checking_0_0_newplda_train_0',
+		'newplda_beta_checking_0_1_newplda_train_0',
+		'newplda_datatable_checking_pred_0_0_newplda_predict_0',
+		'newplda_datatable_checking_pred_0_1_newplda_predict_0',
+		'newplda_datatable_checking_pred_0_5_newplda_predict_0',
+		'newplda_modeltable_checking_pred_0_0_newplda_predict_0',
+		'newplda_outdatatable_checking_pred_0_0_newplda_predict_0'
+		)
+      THEN 
+        CASE WHEN tr.issuccessful = false and (
+            tr.result_info LIKE '%psql failed with error INFO:%validating the data table%' OR 
+            tr.result_info LIKE '%psql failed with error INFO:%checking the model table%' OR
+            tr.result_info LIKE '%psql failed with error ERROR:%plpy.Error: invalid argument%')
+        THEN
+            'PASSED'
+        ELSE
+            'FAILED'
+        END
+
+      WHEN tr.itemname in (
+		'newplda_datatable_checking_0_6_newplda_train_0', 
+		'newplda_modeltable_checking_0_1_newplda_train_0',
+		'newplda_outdatatable_checking_0_1_newplda_train_0',
+		'newplda_datatable_checking_pred_0_6_newplda_predict_0',
+		'newplda_modeltable_checking_pred_0_1_newplda_predict_0', 
+		'newplda_outdatatable_checking_pred_0_1_newplda_predict_0'
+	  )
+      THEN 
+		CASE WHEN tr.issuccessful = true and tr.result_info = '(No rows)' 
+        THEN
+            'PASSED'
+        ELSE
+            'FAILED'
+        END
+
       WHEN tr.itemname in ('km_pp_seeding_negative_relsource_0_0_km_pp_seeding_default_fndist_initialcentroids_0',
                            'km_random_seeding_negative_relsource_0_0_km_random_seeding_default_initialcentroids_0', 
                            'km_pp_seeding_negative_relsource_0_1_km_pp_seeding_default_fndist_initialcentroids_0', 

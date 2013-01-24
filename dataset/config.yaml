@@ -1,16 +1,17 @@
 DataModeling :
-    SupervisedLearning :
-        DecisionTree :
-        LinearRegression :
-        LogisticRegression :
-        MultinomialLogisticRegression :
-        NaiveBayesClassification :
-        RandomForest :
-        SupportVectorMachines :
+    SupervisedLearning : 
+        DecisionTree : false
+        LinearRegression : false
+        LogisticRegression : false
+        MultinomialLogisticRegression : false
+        NaiveBayesClassification : false
+        RandomForest : false
+        SupportVectorMachines : false
     UnsupervisedLearning :
-        kMeansClustering :
-        AssociationRules :
-        ParallelLatentDirichletAllocation :
+        kMeansClustering : false
+        AssociationRules : false
+        ParallelLatentDirichletAllocation : false
+        LDA :
 InferentialStatistics :
-    HypothesisTests :
-Common :
+    HypothesisTests : false
+Common : false

@@ -6568,7 +6568,81 @@
 
       </algorithm>               
 
-
-
+    <algorithm>
+        <name>newplda</name>
+        <method>
+            <name>newplda_train</name>
+            <template>
+                 SELECT {madlib_schema}.newplda_train(
+                                {datatable},
+                                {modeltable},
+                                {outputdatatable},
+                                {vocsize},
+                                {topicnum},
+                                {iternum},
+                                {alpha},  
+                                {beta}  
+                                ) AS Q;
+            </template>
+            <input_parameter>
+                <name>datatable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>modeltable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>outputdatatable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>vocsize</name>
+                <type>int4</type>
+            </input_parameter>
+            <input_parameter>
+                <name>topicnum</name>
+                <type>int4</type>
+                <default>100</default>
+            </input_parameter>
+            <input_parameter>
+                <name>iternum</name>
+                <type>int4</type>
+                <default>2</default>
+            </input_parameter>
+            <input_parameter>
+                <name>alpha</name>
+                <type>float</type>
+                <default>0.05</default>
+            </input_parameter>
+            <input_parameter>
+                <name>beta</name>
+                <type>float</type>
+                <default>0.01</default>
+            </input_parameter>
+        </method>
+        <method>
+            <name>newplda_predict</name>
+            <template>
+                SELECT {madlib_schema}.newplda_predict(
+                                {datatable},
+                                {modeltable},
+                                {outputdatatable}
+                                ) AS Q;
+            </template>
+            <input_parameter>
+                <name>datatable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>modeltable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>outputdatatable</name>
+                <type>text</type>
+            </input_parameter>
+        </method>
+    </algorithm>
 
 </algorithms>

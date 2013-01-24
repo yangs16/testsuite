@@ -1,0 +1,8 @@
+# Ignore files in datasets/download and datasets/sql
+/bootstrap/*.sql
+
+/report*
+/testcase*
+
+*.pyc
+*.gz

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<analytics_tools>
+	<metadata>
+	     <column>
+	        <name>name</name>
+	        <type>varchar(128)</type>
+	     </column>
+	    <column>
+	        <name>kind</name>
+	        <type>varchar(128)</type>
+	     </column>
+	    <column>
+	        <name>host</name>
+	        <type>varchar(128)</type>
+	     </column>
+	    <column>
+	        <name>port</name>
+	        <type>int</type>
+	     </column>
+	    <column>
+	        <name>database</name>
+	        <type>varchar(128)</type>
+	    </column>
+            <column>
+                <name>superuser</name>
+                <type>varchar(128)</type>
+            </column>
+            <column>
+                <name>username</name>
+                <type>varchar(128)</type>
+            </column>
+            <column>
+                 <name>env</name>
+                 <type>text</type>
+            </column>
+	    <column>
+	        <name>master_dir</name>
+	        <type>text</type>
+	    </column>
+	</metadata>
+
+        <analytics_tool>
+            <name>GPDB42</name>
+            <kind>greenplum</kind>
+            <host>127.0.0.1</host>
+            <port>5432</port>
+            <database>madlib</database>
+            <user>madlibtester</user>
+            <superuser>yangs16</superuser>
+            <master_dir>/Users/yangs16/gpdb/master/gpseg-1</master_dir>
+            <env>/Users/yangs16/greenplum-db-4.2.2.4/greenplum_path.sh</env>
+        </analytics_tool>
+</analytics_tools>
