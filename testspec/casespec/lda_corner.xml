@@ -2,17 +2,17 @@
 <test_suites>
     <test_type>feature</test_type>
     <multi_test_suites>
-        <algorithm>newplda</algorithm>
+        <algorithm>lda</algorithm>
         <methods>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
                 <parameter>
                     <name>benchmark</name>
                     <value>TemplateExecutor</value>
                 </parameter>
             </method>
             <method>
-                <name>newplda_predict</name>
+                <name>lda_predict</name>
                 <parameter>
                     <name>benchmark</name>
                     <value>TemplateExecutor</value>
@@ -20,13 +20,13 @@
             </method>
         </methods>
         <test_suite>
-	        <name>newplda_datatable_checking</name>
+	        <name>lda_datatable_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
                     <list_parameter>
 		                <name>datatable</name>
@@ -73,13 +73,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_modeltable_checking</name>
+	        <name>lda_modeltable_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -121,13 +121,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_outdatatable_checking</name>
+	        <name>lda_outdatatable_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -169,13 +169,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_vocsize_checking</name>
+	        <name>lda_vocsize_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -217,13 +217,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_topicnum_checking</name>
+	        <name>lda_topicnum_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -265,13 +265,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_iternum_checking</name>
+	        <name>lda_iternum_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -313,13 +313,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_alpha_checking</name>
+	        <name>lda_alpha_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -361,13 +361,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_beta_checking</name>
+	        <name>lda_beta_checking</name>
             <comments>
-                Test the parameter checking of newplda_train over a toy dataset.
+                Test the parameter checking of lda_train over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
 		            <parameter>
 		                <name>datatable</name>
@@ -409,13 +409,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_toy_gen_model_for_pred_parameter_checking</name>
+	        <name>lda_toy_gen_model_for_pred_parameter_checking</name>
             <comments>
-                Generate a valid model with the toy dataset for the parameter checking of newplda_predict.
+                Generate a valid model with the toy dataset for the parameter checking of lda_predict.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_train</name>
+                <name>lda_train</name>
 	            <parameters>
                     <parameter>
 		                <name>datatable</name>
@@ -456,13 +456,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_datatable_checking_pred</name>
+	        <name>lda_datatable_checking_pred</name>
             <comments>
-                Test the parameter checking of newplda_predict over a toy dataset.
+                Test the parameter checking of lda_predict over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_predict</name>
+                <name>lda_predict</name>
 	            <parameters>
                     <list_parameter>
 		                <name>datatable</name>
@@ -489,13 +489,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_modeltable_checking_pred</name>
+	        <name>lda_modeltable_checking_pred</name>
             <comments>
-                Test the parameter checking of newplda_predict over a toy dataset.
+                Test the parameter checking of lda_predict over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_predict</name>
+                <name>lda_predict</name>
 	            <parameters>
                     <parameter>
 		                <name>datatable</name>
@@ -517,13 +517,13 @@
 	        </method>
         </test_suite>
         <test_suite>
-	        <name>newplda_outdatatable_checking_pred</name>
+	        <name>lda_outdatatable_checking_pred</name>
             <comments>
-                Test the parameter checking of newplda_predict over a toy dataset.
+                Test the parameter checking of lda_predict over a toy dataset.
             </comments>
             <execute_rate>1</execute_rate>
             <method>
-                <name>newplda_predict</name>
+                <name>lda_predict</name>
 	            <parameters>
                     <parameter>
 		                <name>datatable</name>

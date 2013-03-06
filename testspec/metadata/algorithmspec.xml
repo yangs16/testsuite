@@ -6569,11 +6569,11 @@
       </algorithm>               
 
     <algorithm>
-        <name>newplda</name>
+        <name>lda</name>
         <method>
-            <name>newplda_train</name>
+            <name>lda_train</name>
             <template>
-                 SELECT {madlib_schema}.newplda_train(
+                 SELECT {madlib_schema}.lda_train(
                                 {datatable},
                                 {modeltable},
                                 {outputdatatable},
@@ -6622,9 +6622,9 @@
             </input_parameter>
         </method>
         <method>
-            <name>newplda_predict</name>
+            <name>lda_predict</name>
             <template>
-                SELECT {madlib_schema}.newplda_predict(
+                SELECT {madlib_schema}.lda_predict(
                                 {datatable},
                                 {modeltable},
                                 {outputdatatable}
