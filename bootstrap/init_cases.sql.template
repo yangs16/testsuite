@@ -120,6 +120,7 @@ CREATE OR REPLACE VIEW testresultreport AS
 		)
       THEN 
         CASE WHEN tr.issuccessful = false and (
+            tr.result_info LIKE '%invalid argument%' OR
             tr.result_info LIKE '%rows have zero or negative count%' OR
             tr.result_info LIKE '%rows have negative wordid%%' OR
             tr.result_info LIKE '%the actual size of vocabulary % is larger than the specified %')
