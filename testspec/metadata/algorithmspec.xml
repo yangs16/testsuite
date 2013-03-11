@@ -6643,6 +6643,22 @@
                 <type>text</type>
             </input_parameter>
         </method>
+        <method>
+            <name>lda_get_perplexity</name>
+            <template>
+                SELECT {madlib_schema}.lda_get_perplexity(
+                                {modeltable},
+                                {outputdatatable}
+                                ) AS Q;
+            </template>
+            <input_parameter>
+                <name>modeltable</name>
+                <type>text</type>
+            </input_parameter>
+            <input_parameter>
+                <name>outputdatatable</name>
+                <type>text</type>
+            </input_parameter>
+        </method>
     </algorithm>
-
 </algorithms>
