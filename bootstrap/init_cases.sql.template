@@ -120,9 +120,9 @@ CREATE OR REPLACE VIEW testresultreport AS
 		)
       THEN 
         CASE WHEN tr.issuccessful = false and (
-            tr.result_info LIKE '%psql failed with error INFO:%validating the data table%' OR 
-            tr.result_info LIKE '%psql failed with error INFO:%checking the model table%' OR
-            tr.result_info LIKE '%psql failed with error ERROR:%plpy.Error: invalid argument%')
+            tr.result_info LIKE '%rows have zero or negative count%' OR
+            tr.result_info LIKE '%rows have negative wordid%%' OR
+            tr.result_info LIKE '%the actual size of vocabulary % is larger than the specified %')
         THEN
             'PASSED'
         ELSE

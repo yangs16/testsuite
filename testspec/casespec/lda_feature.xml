@@ -18,6 +18,13 @@
                     <value>TemplateExecutor</value>
                 </parameter>
             </method>
+            <method>
+                <name>lda_get_perplexity</name>
+                <parameter>
+                    <name>benchmark</name>
+                    <value>TemplateExecutor</value>
+                </parameter>
+            </method>
         </methods>
         <test_suite>
 	        <name>lda_basic_function_nips</name>
