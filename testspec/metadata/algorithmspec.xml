@@ -6608,7 +6608,7 @@
             <input_parameter>
                 <name>iternum</name>
                 <type>int4</type>
-                <default>2</default>
+                <default>20</default>
             </input_parameter>
             <input_parameter>
                 <name>alpha</name>
